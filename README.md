@@ -11,7 +11,7 @@ For this reason, I am proposing a project to practice our programming for 10-20 
 <ol>
 <li>Each person who wishes to participate, and I stress that this is completely optional, will choose a programming language, ideally one that they are learning but you can do one you know already. If two people choose the same language, that is fine. I am choosing C.</li>
 <li>Each day I will choose an algorithm to implement, and I will produce some C code to implement that algorithm</li>
-<li>Then, all other participants will produce a program in their chosen language, if they are not busy.</li>
+<li>Then, all other participants will produce a program implementing the same algorithm in their chosen language, if they are not busy.</li>
 <li>They can test their program using some tests which I will publish on the challenge page</li>
 <li>And then they can make a pull request to upload their code to the repository, or email me it and I will add it myself if you are not familiar with GitHub.</li>
 </ol>
@@ -29,3 +29,5 @@ And then we will go "off-piste" and pick some random ones that I find online tha
 Any contributions, no matter what language or algorithm are welcome.
 If you have any suggestions for algorithms, send me an email and I will pop it into the schedule.
 If you are interested in participating, don't feel obliged to do this, but it would be helpful if you could file an Issue on the GitHub page to let me know you are interested.
+
+NB: This might make a good way to practise your JS if you are doing the Code Academy JS as Dr Hedges Suggested
