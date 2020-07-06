@@ -14,6 +14,8 @@ For this reason, I am proposing a project to practice our programming for 10-20 
 <li>Then, all other participants will produce a program implementing the same algorithm in their chosen language, if they are not busy.</li>
 <li>They can test their program using some tests which I will publish on the challenge page</li>
 <li>And then they can make a pull request to upload their code to the repository, or email me it and I will add it myself if you are not familiar with GitHub.</li>
+<li>Anyone who uploads code will then be featured on the repository, and at the end of the project I will choose some of my favourite implementations to highlight in some kind of installtion, probably at Open Day.</li>
+<li>Don't forget that by participating you will also perceive the inestimable benefit of an improved knowledge of your chosen programming language.</li>
 </ol>
 Hopefully this will be a fun way to practice programming and learn about some new algorithms.
 The first few algorithms will be something like: (starting easy with some that we know from GCSE)
