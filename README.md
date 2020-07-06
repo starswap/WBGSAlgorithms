@@ -32,5 +32,7 @@ Any contributions, no matter what language or algorithm are welcome.
 If you have any suggestions for algorithms, send me an email and I will pop it into the schedule.
 If you are interested in participating, don't feel obliged to do this, but it would be helpful if you could file an Issue on the GitHub page to let me know you are interested or Watch the repository from the top right corner.
 
-NB: This might make a good way to practise your JS if you are doing the Code Academy JS as Dr Hedges Suggested
+The project will start next Monday 13th July. 
 
+NB: This might make a good way to practise your JS if you are doing the Code Academy JS as Dr Hedges Suggested
+NB: If you have missed the start of the project, don't worry. You can join at any stage either by catching up or joining in at the given time. 
