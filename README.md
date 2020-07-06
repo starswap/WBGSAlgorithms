@@ -31,3 +31,4 @@ If you have any suggestions for algorithms, send me an email and I will pop it i
 If you are interested in participating, don't feel obliged to do this, but it would be helpful if you could file an Issue on the GitHub page to let me know you are interested or Watch the repository from the top right corner.
 
 NB: This might make a good way to practise your JS if you are doing the Code Academy JS as Dr Hedges Suggested
+
