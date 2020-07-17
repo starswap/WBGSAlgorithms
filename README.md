@@ -34,9 +34,12 @@ If you have any suggestions for algorithms, send me an email and I will add it i
 If you are interested in participating, it would be helpful if you could edit the participants.txt file with your name and chosen language. You will need a GitHub account to do this.
 
 The project will start next Monday 20th July, as the first day of the holidays. We will try to get in a full 6 weeks of algorithming, which should be great preparation for the start of 6th Form.
+
 But until then, you can familiarise yourself with GitHub using the GitHub Instructions that I have published above, and also with the format of the project using the starter algorithm for this weekend (In the Algorithms Folder). This is an implementation of a divisibilty test for numbers divided by 7.
+
 The practise problem should be a bit of a challenge, but don't worry if you can't manage it, as I will publish a full solution and we will start simply with Linear Search on Monday, which everyone should be able to do. 
 
+NB: If you are an external student who didn't study Python for 2ndary School, this could be a way to get familiar with it, or also to get involved with the programming community at our school.
 NB: This might make a good way to practise your JS if you are doing the Code Academy JS as Dr Hedges suggested
 NB: If you have missed the start of the project, don't worry. You can join at any stage either by catching up or joining in at the given time. 
 
