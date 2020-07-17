@@ -1,5 +1,5 @@
 <h1>WBGS Algorithms</h1>
-<h3>A project collaborative for programming practice</h3>
+<h3>A collaborative project for programming practice</h3>
 <p>In order to prepare for A Level Computing, there are two important skills that we can we can work on. This project will seek to develop them simultaneously in a fun way.</p> 
 <ul>
 <li>Algorithm Knowledge - A wider understanding of the different algorithms out there.</li>
