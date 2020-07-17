@@ -48,3 +48,4 @@ NB: This might make a good way to practise your JS if you are doing the Code Aca
 
 NB: If you have missed the start of the project, don't worry. You can join at any stage either by catching up or joining in at the given time. 
 
+Final NB: If you have any questions drop me an email on my school email, which most of you know but you can find by searching on school Gmail (I don't want to publish it here).
