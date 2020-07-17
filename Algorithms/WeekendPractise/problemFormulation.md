@@ -1,4 +1,6 @@
 NB - Hints are published at the bottom of the page so if you want to avoid them, don't scroll down!
+Having completed this algorithm, don't forget to submit your solution to me to have it featured.
+
 <h1>Getting Started</h1>
 <h2>A Divisibility Test for the number 7</h2>
 
