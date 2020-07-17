@@ -3,4 +3,5 @@ Please add your name by editing the file if you want to join in.
 
 Format Forename - Language
 
-1. Hamish - C (Just me:( )
+1. Hamish - C
+2. Ibrahim - HTML/CSS/JS
