@@ -37,5 +37,6 @@ int part2 (long toCheck) {
 	units = (stringed[0] == '-') ? -1*atoi(unitsChar) : atoi(unitsChar);//If the first character of the number is a -, then we have a negative number so adjust the final units integer accordingly to make sure that the 10M + R representation as described in the problem formulation is correct.
 	tens = (toCheck - units)/10;//tens is M from the problem formulation, which is the number of tens in the original number.
 	tens = tens - 2*units;//Do the final divisibility test by subtracting 2R from M. We know need to know if this result is divisible by 7 to know if the original number was divisible by 7. Hence, use recursion.
+	free(unitsChar);
 	return part2(tens); // Using a recursive function. The while loop method works too. We ask whether the result we just got is divisible by 7 or not by calling the same function. If it is, then the original number was, and if not then the original number was not. Thus the answer to the original division question is the same as that of the new one, which we can hence directly return from the function.
 }
