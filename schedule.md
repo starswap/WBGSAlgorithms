@@ -1,9 +1,9 @@
 <h1>Schedule</h1>
 <h3>To be updated each week</h3>
 
-<tr><td>Linear Search </td><td>Monday 20/07/20</td><td>TODAY</td></tr>
-<tr><td>Euclidean Algorithm </td><td>Tuesday 21/07/20</td><td>Still to come</td></tr>
-<tr><td>Bubble Sort </td><td>Wednesday 22/07/20</td><td>Still to come</td></tr>
+<tr><td>Linear Search </td><td>Monday 20/07/20</td><td>Still to come</td></tr>
+<tr><td>Bubble Sort </td><td>Tuesday 21/07/20</td><td>Still to come</td></tr>
+<tr><td>Euclidean Algorithm </td><td>Wednesday 22/07/20</td><td>Still to come</td></tr>
 <tr><td>Binary Search </td><td>Thursday 23/07/20</td><td>Still to come</td></tr>
 <tr><td>Merge Sort </td><td>Friday 24/07/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Saturday 25/07/20</td><td>Still to come</td></tr>
