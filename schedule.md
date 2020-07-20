@@ -5,7 +5,7 @@
 <br />
 <table>
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
-<tr><td>Linear Search </td><td>Monday 20/07/20</td><td>Still to come</td></tr>
+<tr><td>Linear Search </td><td>Monday 20/07/20</td><td>TODAY</td></tr>
 <tr><td>Bubble Sort </td><td>Tuesday 21/07/20</td><td>Still to come</td></tr>
 <tr><td>Euclidean Algorithm </td><td>Wednesday 22/07/20</td><td>Still to come</td></tr>
 <tr><td>Binary Search </td><td>Thursday 23/07/20</td><td>Still to come</td></tr>
