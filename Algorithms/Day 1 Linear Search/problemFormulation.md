@@ -65,7 +65,7 @@ The way you would do this is by passing a reference to the searching algorithm t
 
 This would be implemented like this, for example:
 
-
+```
 FUNCTION tester(input_data,*function_to_test)
 
 	original_time <- GET CURRENT TIME
@@ -79,7 +79,7 @@ FUNCTION tester(input_data,*function_to_test)
 	RETURN end_time - original_time
 
 END FUNCTION
-
+```
 It turns out to be more or less easy to achieve this depending on the language you have chosen.
 
 In a LLL like C, you can pass a function pointer pointing to function_to_test to tester, and have tester call the function passed in as an argument by dereferencing the pointer.
