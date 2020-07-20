@@ -10,8 +10,8 @@
 <tr><td>Euclidean Algorithm </td><td>Wednesday 22/07/20</td><td>Still to come</td></tr>
 <tr><td>Binary Search </td><td>Thursday 23/07/20</td><td>Still to come</td></tr>
 <tr><td>Merge Sort </td><td>Friday 24/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Saturday 25/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Sunday 26/07/20</td><td>Still to come</td></tr>
+<tr><td>Insertion Sort </td><td>Saturday 25/07/20</td><td>Still to come</td></tr>
+<tr><td>Heap Sort </td><td>Sunday 26/07/20</td><td>Still to come</td></tr>
 </table>
 
 <br />
