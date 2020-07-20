@@ -27,36 +27,64 @@ I would recommend adjusting the way in which you input into the function.
 <li>However, as we know, these searching algorithms are most useful on large amounts of data, which cannot be searched easily by hand. Create some code that reads in a csv or \n separated file which represents a list of items within which to search. (In PHP you might prefer to serialise). Now get user input of the target item, and then pass these two into your function.</li>
 <li>I have provided some sample data in the problem folder, which is a large list of integers separated by new lines, but you could also produce your own as another extension, perhaps taking the two example generation programs in C and Python as examples.</li>
 <li>Finally, we want to be able to test the comparitive efficiencies of our sorting and searching algorithms, once we have done all of them. Consider how you would do this, and produce a program which can test them</li>
+<li>Additionally, you could try to make the algorithm work to search for single characters or substrings inside strings</li>
 </ol>
 
 If you have any other ideas for extensions, send an email, file an issue or create a pull request by editing this file and I will add them in here.
 
 <h3>Tests</h3>
+I have included a file of integers and of strings which can both be searched once you have written a program that can read from a file.
+
+Otherwise you can enter any array and search from that, e.g.:
+
+
+Find 'a' in ['a','b','c','d','e'] 
+
+
 
 HINTS BELOW
 
 For the final extension task, you will need to have implemented your searching algorithm as a function, ideally as part of a library or header file.
+
 Then you want to produce some test data or get the data from this folder.
+
 You want to write another program which will serve as an outer shell to the algorithm. This program will start a timer, run the algorithm and then stop the timer.
+
+
+
 
 To start a timer, you can simply get the current time in seconds since the Epoch in 1970, and do the same at the end. Then subtract the difference. You don't actually need to start a timer as a child process.
 
 
+
+
+
 You want to be able to do this with your other searching and sorting algorithms once we have made them, so I would recommend producing a function which can test other functions.
+
 The way you would do this is by passing a reference to the searching algorithm to the test function. The test function would then do all of the testing, and return a simple time taken value for the execution of the function on the test data, which would also be passed as a parameter:
 
 This would be implemented like this, for example:
 
+
 FUNCTION tester(input_data,*function_to_test)
+
 	original_time <- GET CURRENT TIME
+
 	function_to_test(input_data)
+
 	GET CURRENT TIME
+
 	end_time <- GET CURRENT TIME
+
 	RETURN end_time - original_time
+
 END FUNCTION
 
 It turns out to be more or less easy to achieve this depending on the language you have chosen.
+
 In a LLL like C, you can pass a function pointer pointing to function_to_test to tester, and have tester call the function passed in as an argument by dereferencing the pointer.
+
 In Javascript, I believe that functions are variables just the same as any other, so it should be possible to pass the function without brackets to tester, then call it as normal inside.
+
 As for other languages, it could be more difficult but hopefully you can adapt these examples to your language of choice. 
 
