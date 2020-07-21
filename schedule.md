@@ -5,23 +5,23 @@
 <br />
 <table>
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
-<tr><td>Linear Search </td><td>Monday 20/07/20</td><td>TODAY</td></tr>
-<tr><td>Bubble Sort </td><td>Tuesday 21/07/20</td><td>Still to come</td></tr>
+<tr><td>Linear Search </td><td>Monday 20/07/20</td><td>DONE</td></tr>
+<tr><td>Bubble Sort </td><td>Tuesday 21/07/20</td><td>TODAY</td></tr>
 <tr><td>Euclidean Algorithm </td><td>Wednesday 22/07/20</td><td>Still to come</td></tr>
 <tr><td>Binary Search </td><td>Thursday 23/07/20</td><td>Still to come</td></tr>
-<tr><td>Merge Sort </td><td>Friday 24/07/20</td><td>Still to come</td></tr>
+<tr><td>https://www.toptal.com/developers/sorting-algorithmsMerge Sort </td><td>Friday 24/07/20</td><td>Still to come</td></tr>
 <tr><td>Insertion Sort </td><td>Saturday 25/07/20</td><td>Still to come</td></tr>
-<tr><td>Heap Sort </td><td>Sunday 26/07/20</td><td>Still to come</td></tr>
+<tr><td>Primality Test </td><td>Sunday 26/07/20</td><td>Still to come</td></tr>
 </table>
 
 <br />
 <table>
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
-<tr><td>TBC </td><td>Monday 27/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Tuesday 28/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Wednesday 29/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Thursday 30/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
+<tr><td>Heap Sort </td><td>Monday 27/07/20</td><td>Still to come</td></tr>
+<tr><td>Djikstra's Algorithm </td><td>Tuesday 28/07/20</td><td>Still to come</td></tr>
+<tr><td>A* Search Algorithm </td><td>Wednesday 29/07/20</td><td>Still to come</td></tr>
+<tr><td>Shell Sort </td><td>Thursday 30/07/20</td><td>Still to come</td></tr>
+<tr><td> </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Saturday 01/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Sunday 02/08/20</td><td>Still to come</td></tr>
 </table>
