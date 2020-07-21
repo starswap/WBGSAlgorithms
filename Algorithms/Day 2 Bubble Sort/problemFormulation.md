@@ -15,6 +15,7 @@ Also, here's a link that may bring back a few memories:
 	https://www.youtube.com/watch?v=lyZQPjUT5B4
 
 The bubble sort algorithm (found here: https://en.wikipedia.org/wiki/Bubble_sort) has quadratic time complexity or O(n^2). This means that when the data set size is doubled, the amount of operations required to complete the algorithm is quadrupled.
+
 In this algorithm, we will do the following:
 <ol>
 <li>Make repeated passes over an unsorted list.</li>
@@ -54,6 +55,7 @@ As mentioned above, You can test this with any list of values, sorting by hand t
 
 E.g. (With all steps listed for completeness of algorithm test)
 
+
 ```
 [7,5,6,3,1] 
 [5,7,6,3,1]
@@ -72,7 +74,11 @@ BLANK FINAL PASS
 END ALGORITHM
 ```
 
+
+
+
 HINTS BELOW
 
 I can't really think of any constructive hints for today, except one:
-	If you are having trouble exiting the loop after a pass which makes no change, use a boolean (or binary int.) flag, "changed",which is set as False at the beginning of every pass. When a change is made, set to True. The while loop's condition should reference this flag.
+
+If you are having trouble exiting the loop after a pass which makes no change, use a boolean (or binary int.) flag, "changed",which is set as False at the beginning of every pass. When a change is made, set to True. The while loop's condition should reference this flag.
