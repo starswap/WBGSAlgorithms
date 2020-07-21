@@ -10,6 +10,7 @@ Continuing the series on sorting and searching algorithms, we are going to tackl
 
 Before we start the implementation of this algorithm, I'd like to reference a fantastic site which demonstrates the efficiencies of different sorting algorithms for different dataset characteristics:
 	https://www.toptal.com/developers/sorting-algorithms
+
 Also, here's a link that may bring back a few memories:
 	https://www.youtube.com/watch?v=lyZQPjUT5B4
 
@@ -37,7 +38,7 @@ Unlike with searching, we can only sort on arrays of a single data type. This me
 </ol>
 
 Here are the extensions from yesterday, which could also work for this sorting algorithm:
-</li>First, create a function which can take inputs from the code, and hard-code in a list and a target value to pass to the function.</li>
+<ol><li>First, create a function which can take inputs from the code, and hard-code in a list and a target value to pass to the function.</li>
 <li>Then, look to take user input of the list to sort (You will need to ask for the list length then use a loop to take input this many times, or you could have the user space out each item with a certain separator</li>
 <li>However, as we know, these sorting algorithms are most useful on large amounts of data, which cannot be sorted easily by hand. Create some code that reads in a csv or \n separated file which represents the list to be sorted</li>
 <li>You can use the test data files from yesterday to check that your file reading and sorting works, and for a large data set to test the time efficiency of the algorithm</li>
