@@ -31,6 +31,7 @@ The Highest Common Factor is a.
 
 If your chosen language offers DO/WHILE, you might find it easier/as easy to implement the algorithm using that technique, although it seems that this pseudocode works fine without it.
 
+<h3>Task</h3>
 The task for today is to produce a program that implements the Euclidean Algorithm to calculate the HCF of two integers.
 
 <h3>Extensions</h3>
