@@ -50,11 +50,18 @@ Here is a link which describes and proves some of the approaches mentioned:
 http://www.programming-algorithms.net/article/42865/Least-common-multiple
 
 <h3>Tests</h3>
+
 9876, 6493 --> 1 // Check coprime numbers
+
 9006, 3002 --> 3002 // Check one is a multiple of the other
+
 3002, 9006 --> 3002 // Check order
+
 72, 58 --> 24 // Check numbers which share a factor that is not 1 but are not multiples of each other
+
 0,8 --> 8 //0 is divisible by any non-0 integer 
+
+
 You could also use the integer list generation function or the list of integers published in the linear search challenge to test this algorithm.
 
 
