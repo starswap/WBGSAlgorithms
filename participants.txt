@@ -6,3 +6,4 @@ Format Forename - Language
 1. Hamish - C
 2. Ibrahim - HTML/CSS/JS
 3. Pedro - JS
+4. James - Python
