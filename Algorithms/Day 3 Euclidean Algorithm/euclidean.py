@@ -1,3 +1,4 @@
+#Euclidean Algorithm implementation in Python by James
 a = int(input("please enter the first number: "))
 b = int(input("please enter the second number: "))
 temp = 0
