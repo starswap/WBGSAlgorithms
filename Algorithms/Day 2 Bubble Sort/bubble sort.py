@@ -1,3 +1,4 @@
+#Python implementation of Bubble Sort by James
 #array = [2,83,6,6,88,97,5,154,3,4,35,7,8,2,5,10,7,8,18]
 
 sorted = False
