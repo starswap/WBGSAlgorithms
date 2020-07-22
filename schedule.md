@@ -21,7 +21,7 @@
 <tr><td>Djikstra's Algorithm </td><td>Tuesday 28/07/20</td><td>Still to come</td></tr>
 <tr><td>A* Search Algorithm </td><td>Wednesday 29/07/20</td><td>Still to come</td></tr>
 <tr><td>Shell Sort </td><td>Thursday 30/07/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
+<tr><td>B* Search Algorithm </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Saturday 01/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Sunday 02/08/20</td><td>Still to come</td></tr>
 </table>
