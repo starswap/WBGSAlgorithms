@@ -1,3 +1,4 @@
+#Implementation of Linear Search in Python by James
 #array = [1,2,3,4,5,6,7,8,9]
 
 target = input("what are you looking for?:   ")
