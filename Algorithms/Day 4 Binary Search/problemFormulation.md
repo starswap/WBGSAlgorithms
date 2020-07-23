@@ -42,6 +42,14 @@ Here are some pros and cons of the Binary Search Algorithm. Refer back to these 
 
 Today's task is to produce an implementation of the Binary Search Algorithm, which should work on sorted lists of numeric values (real numbers) and strings (sorted alphabetically).
 
+<h3>Tests</h3>
+You can re-use the file of integers and of strings which can both be searched once you have written a program that can read from a file, which are present in the Day 1 Linear Search directory.
+
+Otherwise you can enter any array and search from that, e.g.:
+
+Find 'a' in ['a','b','c','d','e']
+
+
 <h3>Extensions</h3>
 <ul>
 <li>Combine your Bubble Sort and Binary Search algorithms (if they are written as functions this should be easy), in order to allow an unsorted list to be entered by the user or read from a file, and to be searched with Binary Search.</li>
