@@ -29,7 +29,7 @@
 <br />
 <table>
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
-<tr><td>TBC </td><td>Monday 03/08/20</td><td>Still to come</td></tr>
+<tr><td>Quick Select </td><td>Monday 03/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Tuesday 04/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Wednesday 05/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Thursday 06/08/20</td><td>Still to come</td></tr>
