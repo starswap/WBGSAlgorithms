@@ -138,3 +138,5 @@ In terms of data structures, for a real challenge you will want more complicated
 <li>Dictionaries</li>
 </ul>
 
+Extra links:
+	http://www.differencebetween.net/technology/difference-between-binary-tree-and-binary-search-tree/
