@@ -112,6 +112,9 @@ Each time a new structure is created, we update the node on the level above to l
 
 As you can see, because we give the indices of the connected values in the left and right properties, it doesn't matter whether the values are actually in order in the array or not, or even what order we put them in. This means we can very easily add a new value to the end of the array, complete a binary search to locate where it should be added, and then update the relevant L and R positions.
 
+Here is a better explanation of the relationship between these two constructs https://stackoverflow.com/questions/21586085/difference-between-binary-search-and-binary-search-tree
+
+
 
 In terms of Linked Lists:
 <ul><li>A Linked List is a data structure in which many separate variables are linked together into a list, each one pointing to the next one in the list. Each element is a structure containing the value at this position in the list, and a pointer pointing to the next one of these structures. New values can easily be spliced into these lists by creating a new variable and adjusting the pointer values so that the item before points to this new variable, which points to the item after insertion. The problem is that they can only be accessed sequentially. Without going through the entire list, it is impossible to know how many items are in the list, as you only know at each element whether there is or isn't a next one. In the same way, you cannot access a linked list at any given index without passing through all of the indexes before this one in order to locate the position of the element you want. This requires so much computation that for a linked list, Binary Search is generally no better than Linear Search.</li>
