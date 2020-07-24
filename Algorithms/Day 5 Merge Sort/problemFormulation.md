@@ -57,11 +57,11 @@ FUNCTION merge_sort(list):
 	sorted_b = merge_sort(b)                               #We sort b in yet another instance of the function. We now have two separate sorted sides which need to be merged back together.
         WHILE (LENGTH(sorted_a) > 0 OR LENGTH(sorted_b) > 0):  #While at least one of the lists contains items that haven't been merged (while there are any items left to merge).
 	    IF (LENGTH(sorted_a) == 0):                        #If there are none left in a, b must contain some. We have already checked the last item in a to find that it is before the first item left in b, and b is sorted already. This means we can just append the rest of b to the sorted list.
-		ARRAY_APPEND_ALL_ITEMS(result,sorted_b)                  #Do the appending of all of the remaining items in sorted_b to result.
+		ARRAY_APPEND_ALL_ITEMS(result,sorted_b)                  #Do the appending of all of the remaining items in sorted_b to result. Appreciate the difference between appending these remaining items and appending the whole array - we are really dealing here with array concatenation.
 		BREAK                                          #There are now no elements left to sort in the sorted_a and sorted_b variables, so we can stop this step.
 	    ENDIF
 	    ELSE IF (LENGTH(sorted_b) == 0):                   #If there are no items left in b, we can add the rest of a to the sorted list as above.
-		ARRAY_APPEND_ALL_ITEMS(result,sorted_a)        #Append all of the remaining items in sorted_a to result
+		ARRAY_APPEND_ALL_ITEMS(result,sorted_a)        #Append all of the remaining items in sorted_a to result(concatenation as above)
 		BREAK
 
             IF (sorted_b[0]<sorted_a[0]):                      #This is the main body of the loop. We repeatedly compare the first (i.e. lowest) values in sorted_a and sorted_b to check which one is lower and should be merged next.
@@ -127,8 +127,8 @@ FUNCTION merge_sort(list):
 						ARRAY_DELETE(itemsToMerge[1],0)
 					END_IF
 				END_WHILE
-				ARRAY_APPEND_ALL_ITEMS(merged_result,itemsToMerge[0]) #If all of the items in a are considerably less than all of the items in b for example, we will have merged all of those but there will still be some left in b to merge. These are already sorted as they got sorted when merging last time, so we can just add them straight in.
-				ARRAY_APPEND_ALL_ITEMS(merged_result,itemsToMerge[1]) #and Vice Versa
+				ARRAY_APPEND_ALL_ITEMS(merged_result,itemsToMerge[0]) #If all of the items in a are considerably less than all of the items in b for example, we will have merged all of those but there will still be some left in b to merge. These are already sorted as they got sorted when merging last time, so we can just add them straight in. 
+				ARRAY_APPEND_ALL_ITEMS(merged_result,itemsToMerge[1]) #and Vice Versa. Since we know that one of these arrays is empty and the other contains the remaining elements, we can just concatenate both. This is an alternative to the selection used above in the recursive method. 
 			END_IF				
 			ARRAY_APPEND(thisMergeLevel,merged_result) #Having finalised the merge of the current pair of lists, add that to the current merge so that once we reach the end of this level, we can add it to the overall merge
 		END_FOR
