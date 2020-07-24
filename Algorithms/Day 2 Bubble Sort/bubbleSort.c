@@ -6,7 +6,7 @@ int* bubbleSort (int* toSort,int upDown, int length) { // 1 = ascending, -1 = de
         while (changed == 1) {
                 changed = 0;
                 for (i=0;i<length-1;i++) {
-                        if (toSort[i] > upDown*toSort[i+1]) {
+                        if (upDown*toSort[i] > upDown*toSort[i+1]) {
                                 toSort[i] = toSort[i] ^ toSort[i+1]; //Use bitwise XOR to swap the vals without need for another variable - one of my favourite C tricks. 
                                 toSort[i+1] = toSort[i] ^ toSort[i+1];
                                 toSort[i] = toSort[i] ^ toSort[i+1];
