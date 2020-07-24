@@ -11,7 +11,7 @@ In many ways, Merge Sort is the sorting equivalent of Binary Search. Both algori
 The Merge Sort Algorithm has log linear time complexity O(n log(n)), which means that it is less complex and so more efficient than Linear Search, but slightly more complex / less efficient than binary search, and of course much better than the quadratic Bubble Sort. One must remember that we shouldn't necessarily compare algorithms for two different purposes in terms of their efficiency, as they are ultimately very different. 
 
 <img src="https://cdn-images-1.medium.com/max/1600/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg" />
-
+[Source https://www.bigocheatsheet.com/]
 
 
 A disadvantage of the Merge Sort algorithm in comparison to the Bubble Sort algorithm is that it is less memory/space efficient. This is because the sorting is not carried out on the original list, instead a copy is used at each level. This means we use more memory than for Bubble Sort. It is however, more time efficient than the Bubble Sort algorithm, with a more consistent run-time that is shorter for longer lists. Bubble sort does maintain two other advantages, though, these being the ease of programming (merge sort is a bit complex), and the efficiency as a check to see whether a list is sorted. In Merge sort the whole algorithm must be carried out to do this check, including all of the splitting and merging, while 1 simple pass of Bubble Sort will verify the state of a given list.
