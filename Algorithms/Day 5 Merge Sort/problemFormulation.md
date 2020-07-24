@@ -1,4 +1,4 @@
-TL;DR - Make the Merge Sort algorithm for integer and string sorting. You can use an iterative method or a recursive method, but I highly recommend a recursive method. The Merge Sort algorithm works by repeatedly splitting a list in half until we get to individual elements. These elements are merged in pairs to create lists of two elements, which are successively merged in pairs, with the number of lists halving and the list lengths doubling at each level, until we are left with 1 single list which is a sorted version of the original list.
+TL;DR - Make the Merge Sort algorithm for integer and string sorting. You can use an iterative method or a recursive method, but I <strong>highly</strong> recommend a recursive method. The Merge Sort algorithm works by repeatedly splitting a list in half until we get to individual elements. These elements are merged in pairs to create lists of two elements, which are successively merged in pairs, with the number of lists halving and the list lengths doubling at each level, until we are left with 1 single list which is a sorted version of the original list.
 <h1>Day 5</h1>
 <h2>Merge Sort</h2>
 <h3>Problem</h3>
