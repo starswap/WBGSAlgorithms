@@ -77,8 +77,10 @@ FUNCTION merge_sort(list):
 END_FUNCTION
 ```
 <h5>Iteration</h5>
+We could save memory in a real implementation by using fewer varaibles, but clarity would be lost.
+
 ```
-#(Could save memory by using fewer variables, but we would lose clarity.)
+
 FUNCTION merge_sort(list):
 	splits = [[list]] #Looks like [[[3,6,2,4]]] as list is [3,6,2,4] for example. Will become [[[3,6,2,4]],[[3,6],[2,4]],[[3],[6],[2],[4]]]
 	WHILE (LENGTH(splits[LENGTH(splits)-1]) != LENGTH(list))): # The first term starts off as 1, then 2, then 4 etc, doubling each time although that depends on the presence of odd numbers. That is to say "while we haven't split the list down to single values"
@@ -134,6 +136,7 @@ FUNCTION merge_sort(list):
 	END_FOR
 	RETURN results[LENGTH(results-1][0] #At the end, we want to return the final sorted list, which can be found at the final position in the merges list.
 END_FUNCTION
+
 ```
 
 
