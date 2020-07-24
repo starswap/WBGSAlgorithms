@@ -57,11 +57,11 @@ FUNCTION merge_sort(list):
 	sorted_b = merge_sort(b)                               #We sort b in yet another instance of the function. We now have two separate sorted sides which need to be merged back together.
         WHILE (LENGTH(sorted_a) > 0 OR LENGTH(sorted_b) > 0):  #While at least one of the lists contains items that haven't been merged (while there are any items left to merge).
 	    IF (LENGTH(sorted_a) == 0):                        #If there are none left in a, b must contain some. We have already checked the last item in a to find that it is before the first item left in b, and b is sorted already. This means we can just append the rest of b to the sorted list.
-		ARRAY_APPEND(result,sorted_b)                  #Do the appending.
+		ARRAY_APPEND_ALL(result,sorted_b)                  #Do the appending.
 		BREAK                                          #There are now no elements left to sort in the sorted_a and sorted_b variables, so we can stop this step.
 	    ENDIF
 	    ELSE IF (LENGTH(sorted_b) == 0):                   #If there are no items left in b, we can add the rest of a to the sorted list as above.
-		ARRAY_APPEND(result,sorted_a)
+		ARRAY_APPEND_ALL(result,sorted_a)
 		BREAK
 
             IF (sorted_b[0]<sorted_a[0]):                      #This is the main body of the loop. We repeatedly compare the first (i.e. lowest) values in sorted_a and sorted_b to check which one is lower and should be merged next.
