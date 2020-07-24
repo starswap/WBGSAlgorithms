@@ -77,11 +77,67 @@ FUNCTION merge_sort(list):
 END_FUNCTION
 ```
 <h5>Iteration</h5>
-
 ```
-#Iterative code will appear here when I have time.
+#(Could save memory by using fewer variables, but we would lose clarity.)
+FUNCTION merge_sort(list):
+	splits = [[list]] #Looks like [[[3,6,2,4]]] as list is [3,6,2,4] for example. Will become [[[3,6,2,4]],[[3,6],[2,4]],[[3],[6],[2],[4]]]
+	WHILE (LENGTH(splits[LENGTH(splits)-1]) != LENGTH(list))): # The first term starts off as 1, then 2, then 4 etc, doubling each time although that depends on the presence of odd numbers. That is to say "while we haven't split the list down to single values"
+		thisSplit = []		
+		FOR item IN splits[LENGTH(splits)-1]:  #For every value in the current level of splitting
+			lengthOfEachHalf = (LENGTH(item)-1)DIV 2 + 1 #Split that in half by calculating how many sub-values should make up the first half(which is always bigger in case of an odd split)
+			ARRAY_APPEND(thisSplit,item[0:lengthOfEachHalf-1]) #As in the Recursive implementation we are assuming that the [ra:nge] operator includes both ends. Make the of the current value and append the first new half to thisSplit
+			IF (lengthOfEachHalf != LENGTH(item)):#If we are splitting more than 1 single value (as if we are only splitting one, the first half already contains that 1 val.)			
+				ARRAY_APPEND(thisSplit,item[lengthOfEachHalf:LENGTH(item)-1]) #Append to the current split the second half of the split list.
+			END_IF
+		END_FOR		
+		ARRAY_APPEND(splits,thisSplit)#We now append the list after the current iteration of splitting to the list splits so that by the end this contains a number of arrays of sub-lists, each array representing a step in the splitting process, up to the final split which is just a list of single values.
+	END_WHILE
+	results = [splits[LENGTH(splits)-1]] #We initialise the results variable which will contain the merged results at each level, using the final split a the starting point
+	FOR i=0 TO LENGTH(splits)-1: # For every time we split the list originally, we want to merge it back up again.
+		nextMergeLevel = splits[LENGTH(splits)-2-i] #Peek at the level we are trying to get to in order to know how we want to build back up (we need to know if we are adding two ones, two twos, a two and a one, or maybe just a single one) in order to build back up in the right order.
+		thisMergeLevel = [] #This will hold the result of the current merge operation as we conduct it.
+		counter = 0 #In order to be able to know how many elements have already been merged, we use this variable to keep track
+		FOR item IN nextMergeLevel: #Loop through all values in the next level up (the unsorted version of the one that we are creating), and for each one work out which values at the current level need to be merged to produce a list of the same length.
+			itemsToMerge = [] #Will hold the items that need to be merged to form a sorted version of item
+			lengthToMerge = LENGTH(item) #The goal is to find a set of elements starting from the beginning of the list that add up to this length.		
+			j = 0 #Loop counter variable
+			toAddToCounter = 0 #At the end of the loop we add this to counter to allow it to persist over several iterations of the outer loop without affecting the inner loop immediately.	
+			WHILE (j <= LENGTH(results[i]) -1 - counter): #Go through every single element at the current level that remains to be merged.
+				lengthToMerge = lengthToMerge - LENGTH(results[i][counter+j]) #Subtract the length of this element so we know how many items we are still waiting for.
+				ARRAY_APPEND(itemsToMerge,results[i][counter+j]) #Collect the list of items to merge, including this one in it.
+				toAddToCounter++ #Increment to allow persistence
+				IF (lengthToMerge == 0): #We have found enough sub-lists to merge to make up the same length as the corresponding list at the level above so exit the loop as we don't need any more.
+					BREAK
+				END_IF
+				j++
+			END_FOR
+			counter += toAddToCounter #Update counter so it takes effect on the next iteration of the loop we are currently inside.
+			IF (LENGTH(itemsToMerge) == 1): #If we are only merging one item (because we are going from [2],[1],[3] to [1,2],[3] for example when we merge the 3)
+				merged_result = itemsToMerge[0] #We don't need to check the sorting of this single val as it must be "sorted"
+			ELSE  #Otherwise we want to merge the two items together keeping the smallest values at the beginning of the merged result
+				merged_result = []
+				WHILE (LENGTH(itemsToMerge[0]) > 0 AND LENGTH(itemsToMerge[1]) > 0): #While we still have items to compare in the two lists
+					IF (itemsToMerge[0][0] < itemsToMerge[1][0]):#We know that these two lists are already sorted, so we either need to merge the first value in one list or the first value in the next list next. Check which one is lower and then merge the correct one so that after this merge the current sub-list stays sorted					
+						ARRAY_APPEND(merged_result,itemsToMerge[0][0])
+						ARRAY_DELETE(itemsToMerge[0],0)
+					ELSE
+						ARRAY_APPEND(merged_result,itemsToMerge[1][0])
+						ARRAY_DELETE(itemsToMerge[1],0)
+					END_IF
+				END_WHILE
+				ARRAY_APPEND_ALL_ITEMS(merged_result,itemsToMerge[0]) #If all of the items in a are considerably less than all of the items in b for example, we will have merged all of those but there will still be some left in b to merge. These are already sorted as they got sorted when merging last time, so we can just add them straight in.
+				ARRAY_APPEND_ALL_ITEMS(merged_result,itemsToMerge[1]) #and Vice Versa
+			END_IF				
+			ARRAY_APPEND(thisMergeLevel,merged_result) #Having finalised the merge of the current pair of lists, add that to the current merge so that once we reach the end of this level, we can add it to the overall merge
+		END_FOR
+		ARRAY_APPEND(results,thisMergeLevel) #Having reached the end of the current level, we add to the list of merge levels so that next time we can operate on the merged list we just made to do the next set of merges
+	END_FOR
+	RETURN results[LENGTH(results-1][0] #At the end, we want to return the final sorted list, which can be found at the final position in the merges list.
+END_FUNCTION
 ```
 
+
+Notice that in both implementations, because we know we are merging sorted lists, we only need to compare the first values in each of these lists when creating a sorted merge. This is from whence Merge Sort derives its efficiency, reducing hence the number of comparisions required to complete the algorithm.
 
 <h3>Tests</h3>
 You should, by now, have a working function to read from files. As such, use the list of integers in the Day 1 Linear Search directory to test the function, sorting these values.
@@ -92,6 +148,7 @@ There should be enough (I think 1000) in there that you see a real performance b
 <li>The recursive example above uses an ARRAY_DELETE operation for clarity. Many LLLs don't have dynamically allocated array memory, and require arrays to be of a fixed length throughout program execution. Consider how you could implement the same algorithm without the use of a delete operation, either in one of these LLLs or in an HLL of choice.</li>
 <li>The pseudocode provided above uses a less than operator, which means it is designed for integer sorting. Can you make it work for the sorting of strings?</li>
 <li>Can you manage to work out the *-1 trick to allow this same function to easily do descending and ascending order sorting? Or maybe you could do it with the less_than() function (as below).</li>
+<li>Because I usually implement this algorithm recursively, and it is by no means optimised for iteration, I am not all that confident with my iterative pseudocode. It works, as tested via a Python translation (available in the same directory as this problem formulation) but if you think you can do a more efficient implementation, file a PR or simply use this algorithm in your code and I can link to it from this problem formulation page.</li>
 </ul>
 
 
