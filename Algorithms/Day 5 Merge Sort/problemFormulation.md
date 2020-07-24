@@ -163,4 +163,3 @@ For the second extension I would probably create a function less_than(a,b) which
 
 You can check for an example of the -1 trick in my bubble_sort code. All you need to do is to multiply both values that you are comparing by either 1 or -1, and use the greater than operator, because if we have say 3 and 4, 3 > 4 ---> False but -3 > -4 ---> True, so the order in which the values will end up is reversed.
 
-.
