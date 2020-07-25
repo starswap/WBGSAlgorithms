@@ -34,7 +34,7 @@ Before we proceed with the algorithm, let's take an (deliberately simplified) ex
 
 Because nodes don't have to have a defined position, certain graphs are equivalent:
 
-<img src="images/equivalent_graph1.png" />
+<img src="images/equivlent_graph1.png" />
 
 <img src="images/equivalent_graph2.png" />"
 
@@ -163,6 +163,7 @@ You should now have a complete network representation inside the computer in the
 
 <h3>Algorithm</h3>
 Here is Prim's Algorithm, as described by the AMSP
+
 ```
 
 minimum_spanning_tree = []
@@ -171,8 +172,9 @@ Choose the lowest weight edge involving this vertex. (Either loop through all ed
 Make the connection by appending this vertex to the minimum_spanning_tree array variable
 While some vertices have no connections: #You would probably keep track of this by an array: ['A','B','C','D']  - remove the vertices when connected, then exit the loop when the array length is 0.
 	Loop over all edges involving points that have already been connected, and choose the lowest weighted one that connects a new vertex. #This is essentially the same as line 3, so you will probably find that vertex representation is more logical.
-
 ```
+
+
 If you are using the Vertex method, you could give each vertex a boolean property representing whether or not it has been added to the minimum spanning tree yet. 
 
 
