@@ -1,4 +1,4 @@
-TL;DR
+TL;DR - Today we are investigating networks. Prim's algorithm finds the cheapest way to connect a number of points together such that every point can be reached on a journey from every other point, in only one way - there are no loops in the graph produced. This type of graph is called a minimum spanning tree. When implementing the algorithm, you will want to use an OOP approach which either centres around Vertex (recommended) or Edge (more difficult) objects. In Prim's algorithm we start by picking a random point, then connecting it to the nearest point possible. Then, until we have a completed tree involving all points, we choose the next cheapest edge possible and connect that to the graph. The process is repeated until a succesful tree is produced.
 <h1>Day 6</h1>
 <h2>Prim's Algorithm</h2>
 
@@ -19,7 +19,7 @@ In Graph Theory we make reference to a number of terms which are used differentl
 <tr><td>Edge</td><td>A straight line or curve connecting two vertices to each other to form a graph. In a network, these edges are given weights, which are numbers that represent 
 <tr><td>Graph</td><td>A collection of nodes/vertices and edges, with the edges joining up the vertices.</td></tr>
 <tr><td>Network</td><td>A graph where all of the edges are labelled with a number, which usually represents something about this connection in reality (as these networks are often simplified representations of real networks.) We might put a value representing the speed of internet connection, or the length of underground train tunnel between two houses or metro stations for example.
-<tr><td>Walk<td><td>According to the AMSP: "A sequence of vertices where consecutive vertices are joined by an edge in a graph", so a route around a given graph.</td></tr>
+<tr><td>Walk</td><td>According to the AMSP: "A sequence of vertices where consecutive vertices are joined by an edge in a graph", so a route around a given graph.</td></tr>
 <tr><td>Cycle</td><td>According to the AMSP: "A walk which starts and finishes at the same vertex, without repeating any other vertex."</td></tr>
 <tr><td>Weight</td><td>What converts a graph into a network - a numeric label attatched to an edge, which represents something about that edge, usually the favourability of it.</td></tr>
 <tr><td>Tree</td><td>According to the AMSP: "A connected graph containing no cycles". This means that there is only ever one way to get between two given points, which isn't necessarily true of a normal graph. A tree always has one more edge than it does vertices</td></tr>
@@ -34,9 +34,9 @@ Before we proceed with the algorithm, let's take an (deliberately simplified) ex
 
 Because nodes don't have to have a defined position, certain graphs are equivalent:
 
-<img src="images/equivalentGraph1.png" />
+<img src="images/equivalent_graph1.png" />
 
-<img src="images/equivalentGraph2.png" />"
+<img src="images/equivalent_graph2.png" />"
 
 This equivalence allows us the possibility of a level of abstraction when representing graphs in computers, because we don't need to worry about the positioning of the points, only the links between them. 
 
@@ -48,7 +48,7 @@ A graph becomes a network via the addition of weights to its edges:
 
 From this network, there are two trees we could create, since there is one cycle that can be removed in two different ways:
 
-<img src="images/otherTree.png" /> <img src="images/minimumSpanningTree.png">
+<img src="images/otherTree.png" /> <img src="images/MinimumSpanningTree.png">
 
 The network above right is the minimum spanning tree for the original network because out of all of the possible options, just two, this one has the lowest weight. 
 
@@ -164,12 +164,14 @@ You should now have a complete network representation inside the computer in the
 <h3>Algorithm</h3>
 Here is Prim's Algorithm, as described by the AMSP
 ```
+
 minimum_spanning_tree = []
 Select any vertex on the network (would probably just do A)
 Choose the lowest weight edge involving this vertex. (Either loop through all edges and check if they involve this vertex using a substring check, or if you did vertices you can simply loop through the edges property of all of the connected vertices. This will be thus a bit more efficient. In both cases keep track of the minimum so far as you iterate.)
 Make the connection by appending this vertex to the minimum_spanning_tree array variable
 While some vertices have no connections: #You would probably keep track of this by an array: ['A','B','C','D']  - remove the vertices when connected, then exit the loop when the array length is 0.
 	Loop over all edges involving points that have already been connected, and choose the lowest weighted one that connects a new vertex. #This is essentially the same as line 3, so you will probably find that vertex representation is more logical.
+
 ```
 If you are using the Vertex method, you could give each vertex a boolean property representing whether or not it has been added to the minimum spanning tree yet. 
 
