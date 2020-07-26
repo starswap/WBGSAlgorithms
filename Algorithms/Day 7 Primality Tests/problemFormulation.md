@@ -154,7 +154,9 @@ I explain this in such detail because although it is such a useful and simple fu
 
 <h3>Hints</h3>
 I would probably do the first extension like this:
+
 ```
+
 primesFile = FILE_OPEN("primes.txt","read")
 primes = []
 WHILE NOT END_OF_FILE(primesFile):#Depending on how your language handles reaching the end of the file and how carefully you program it, you could do this inside the second loop to save on looping, since we are only following a single prime at a time anyway
