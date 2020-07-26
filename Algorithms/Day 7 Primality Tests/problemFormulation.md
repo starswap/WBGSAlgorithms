@@ -67,7 +67,7 @@ Here is the process:
 ```
 FUNCTION rabin_miller():
 	We name the integer we are trying to test n.
-	We express n as (2^s)*d, where d is odd. Both d and s are positive integers
+	We express n as (2^s)*d + 1, where d is odd. Both d and s are positive integers
 	For many a values: #These are the bases of the test, chosen as below
 		possibilityOfCompositeOnThisRound = True
 		For all r values from 0 to s-1 inclusive:
