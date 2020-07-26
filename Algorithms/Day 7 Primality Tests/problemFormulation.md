@@ -129,9 +129,12 @@ Implement both of the primality tests above and compare them.
 
 <h3>Tests</h3>
 You should be able to give these algorithms any number you know to be prime or composite, and receive the correct result returned from the functions. If you want to do bulk testing of your algorithm up to 100,000, use the information in the first extension task.
+
 E.g.
+
 fermat_primality(80) => False
-miller_rabin(97) => False
+
+rabin_miller(97) => False
 
 You can actually use your calculator to easily check the result of these tests if you have a Casio fx-83GT Plus or fx-85GT Plus (or better) calculator. These calculators have a FACT function above the key with the degrees, minutes (apostrophe), seconds (double quote) symbols on it. Use SHIFT to access this function. You simply need to input a number and press equals, then press SHIFT then FACT, and you will get a prime factorisation of the number entered. If the prime factorisation is the number itself, it must be indivisible and hence prime.
 I explain this in such detail because although it is such a useful and simple function, many people are unaware of the capacity of their calculators to perform this operation.
@@ -152,7 +155,6 @@ I explain this in such detail because although it is such a useful and simple fu
 <h3>Hints</h3>
 I would probably do the first extension like this:
 ```
-
 primesFile = FILE_OPEN("primes.txt","read")
 primes = []
 WHILE NOT END_OF_FILE(primesFile):#Depending on how your language handles reaching the end of the file and how carefully you program it, you could do this inside the second loop to save on looping, since we are only following a single prime at a time anyway
