@@ -152,6 +152,7 @@ I explain this in such detail because although it is such a useful and simple fu
 <h3>Hints</h3>
 I would probably do the first extension like this:
 ```
+
 primesFile = FILE_OPEN("primes.txt","read")
 primes = []
 WHILE NOT END_OF_FILE(primesFile):#Depending on how your language handles reaching the end of the file and how carefully you program it, you could do this inside the second loop to save on looping, since we are only following a single prime at a time anyway
@@ -183,7 +184,6 @@ FOR j<-0 TO 2:
 	OUTPUT("Algorithm " + j+1 + " accuracy: " +correctAnswers[j]/100000 + ", time taken to get through all 100,000 values: " + times[j])
 END_FOR
 OUTPUT
-
 ```
 
 Public Key Cryptography and RSA encryption among many others.
