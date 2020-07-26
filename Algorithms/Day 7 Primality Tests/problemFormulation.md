@@ -187,7 +187,6 @@ END_FOR
 FOR j<-0 TO 2:
 	OUTPUT("Algorithm " + j+1 + " accuracy: " +correctAnswers[j]/100000 + ", time taken to get through all 100,000 values: " + times[j])
 END_FOR
-OUTPUT
 ```
 
 Public Key Cryptography and RSA encryption among many others.
