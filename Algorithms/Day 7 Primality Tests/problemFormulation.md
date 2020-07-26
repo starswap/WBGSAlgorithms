@@ -1,4 +1,4 @@
-TL;DR
+TL;DR Primality tests check whether or not a number is prime. The simplest is repeated division of prime numbers up to the square root of the candidate, implemented as the Sieve of Eratosthenes to calculate accurately all primes up to a given value. We are investigating 2 simple tests today, the Fermat and the Rabin-Miller test. The first test is simpler and less reliable, the second is slightly more complex, but guaranteed to be reliable with just a few iterations up to a very high limit for most basic applications. In real life, such as for RSA we would use a better algorithm like Eliptic Curve testing or the AKS testing. The task is to implement both algorithms described here and test their accuracy and efficiency, comparing these to that of repeated division. Both tests work by checking the results of a set of modular arithemetic congruences for multiple "witness" values. The more witnesses that return prime, the more likely the number is to be prime. A prime number may never come back as composite from these tests but a composite number may be mistakenly identified as prime. 
 <h1>Day 7</h1>
 <h2>Primality Tests</h2>
 
@@ -98,7 +98,7 @@ Otherwise, we must try more a values until we are satisfied either way.
 Like with Fermat's test, we can have a values that attest the primality of n, even though it is composite. These are called "strong liars"
 
 <h5>Choosing a values:</h5>
-a should be in the range 1 l&#8804; a &#8804; n-1
+a should be in the range 1 &#8804; a &#8804; n-1
 
 This test can be implemented either probabilistically or deterministically. 
 
