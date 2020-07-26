@@ -204,7 +204,7 @@ Just a few extensions today as I imagine it will take a while to implement all o
 </ul>
 
 <h3>Hints/Extension Answers</h3>
-For the First extension, I would recommend matplotlib for Python/HTML Canvas for JS. If you have used MATLAB/Octave in the past, use it for this one as it makes plotting points and lines so much easier. You may find that you have to sort of convert your network to an x/y graph in order to allow you to plot it. Maybe you want to start by trying a library written for your chosen language that plots networks/graphs and adapt it.
+1. I would recommend matplotlib for Python/HTML Canvas for JS. If you have used MATLAB/Octave in the past, use it for this one as it makes plotting points and lines so much easier. You may find that you have to sort of convert your network to an x/y graph in order to allow you to plot it. Maybe you want to start by trying a library written for your chosen language that plots networks/graphs and adapt it.
 
 2. Tube maps (how can we connect all of the stations the most cheaply/quickly?), Computer Networks (How can we connect all of the computers the most cheaply/quickly), networks of animals (how could we easily improve biodiversity and species interdependence?), networks of people (social or business networks), football strategies (you need to link everyone on the pitch in the way that allows the ball to travel the fastest, for example. Weights depend on the attributes of your players and what you are trying to maximise), among many others.
 
