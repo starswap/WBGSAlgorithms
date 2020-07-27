@@ -8,12 +8,12 @@ This algorithm has quadratic (O(n^2)) time complexity, much like Bubble Sort, bu
 Here are some other advantages and disadvantages of Insertion Sort, taken in part from the <a href="https://en.wikipedia.org/wiki/Insertion_sort">Wikipedia</a> page on this algorithm.
 <table>
 <tr><th>Pros</th><th>Cons</th></tr>
-<tr>Very simple to implement.<td></td><td>{}{}{}</td></tr>
-<tr><td>Efficient for small data sets, compared to Merge Sort and Heap Sort but also to Bubble Sort and other quadratic algorithms.</td><td>Slow for large data sets as the result is built one item at a time.</td></tr>
-<tr><td>Like Bubble Sort, very efficient for data that is nearly sorted (I refer you back to https://www.toptal.com/developers/sorting-algorithms)</td><td>{}{}{}</td></tr>
-<tr><td>Like Bubble Sort, the relative order of equivalent elements is not changed, which could be significant for some applications.</td><td>{}{}{}</td></tr>
-<tr><td>Again like Bubble Sort, we don't need much extra memory other than that of the original list (space for 1 item) which is a significant advantage when compared to Merge Sort.</td><td>{}{}{}</td></tr>
-<tr><td>We can, halfway through sorting, give the algorithm a load more data and it will be able to sort it at the same speed as if it had had it all from the beginning. This is not the same as Merge Sort, for example, which in a classic implementation could not deal with extra values that were not split and merged with the original list. This property is known as "online" - the algorithm works in the "online" setting.</td><td>{}{}{}</td></tr>
+<tr><td>Very simple to implement.</td><td>Generally requires more writes to memory than other similar algorithms such as bubble or selection sort - due to the need to shift the items around.</td></tr>
+<tr><td>Efficient for small data sets, compared to Merge Sort and Heap Sort but also to Bubble Sort and other quadratic algorithms.</td><td>Slow for large data sets as the result is built one item at a time. This is largely because of its high complexity.</td></tr>
+<tr><td>Like Bubble Sort, very efficient for data that is nearly sorted (I refer you back to https://www.toptal.com/developers/sorting-algorithms)</td><td>Works very poorly when the array is reverse-sorted. This is Insertion Sort's worst case. </td></tr>
+<tr><td>Like Bubble Sort, the relative order of equivalent elements is not changed, which could be significant for some applications.</td><td></td></tr>
+<tr><td>Again like Bubble Sort, we don't need much extra memory other than that of the original list (space for 1 item) which is a significant advantage when compared to Merge Sort.</td><td></td></tr>
+<tr><td>We can, halfway through sorting, give the algorithm a load more data and it will be able to sort it at the same speed as if it had had it all from the beginning. This is not the same as Merge Sort, for example, which in a classic implementation could not deal with extra values that were not split and merged with the original list. This property is known as "online" - the algorithm works in the "online" setting.</td><td></td></tr>
 
 It is useful to note that manual sorting of items by a human who can see all of them, such as for playing cards, often uses a method similar to Insertion Sort.
 </table>
@@ -101,7 +101,23 @@ Notice that finding an already sorted element that is less than the value we are
 *Implementation Note - in a real implementation you would skip the first step here as the first item is always sorted to itself. Hence, you would actually have the first k items in order after k-1 steps, as the first step was skipped.
 
 Here is some pseudocode for the Insertion Sort algorithm:
-
+```
+FUNCTION inserton_sort(list):
+	FOR i <- 1 TO LENGTH(list)-1:
+		inserted = False
+		FOR (j=i-1,j>-1,j--):
+			IF (list[i] > list[j]):
+				list = ARRAY_CONCATENATE(list[0:j],list[i],list[j+1:i-1],list[i+1:LENGTH(list)-1]) #Inlusive ranges as below
+				inserted = True
+			ENDIF
+		END_FOR
+		IF (inserted == False): #If we haven't yet inserted the item, we know that it needs to go at the beginning of the list. 
+			list = ARRAY_CONCATENATE(list[i],list[0:i-1],list[i+1:LENGTH(list)-1]) #Inclusive ranges at both ends for this pseudocode
+		ENDIF
+	END_FOR
+	RETURN list
+END_FUNCTION
+```
 Here is a graphical example for Insertion Sort https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
 
 
@@ -109,7 +125,7 @@ Here is a graphical example for Insertion Sort https://upload.wikimedia.org/wiki
 Implement Insertion Sort in your chosen language, and test it on some input data. You can make selection sort as well if you like, but it is generally considered to be inferior in all aspects but one, so wouldn't generally be worth using in reality. The one exception given by Wikipedia is that of a system (such as an embedded system) which uses memory that is damaged by writing / has a very short write life. This is because Insertion Sort makes more writes to the memory than Selection Sort as each time an insertion is performed, we slide every greater element one space to the right to accommodate the added element. In Selection Sort you only have to make 1 swap for each insertion.
 
 <h3>Tests</h3>
-
+You can use any set of real numbers to test the basic number-sorting Insertion Sort, such as the list in the Linear Search directory, then, as before with sorting, I recommend that you try to generalise your function to permit strings and real numbers to be entered (in an LLL you could have 2 arguments instead of just the traditional one to get round the problem of type specified arguments). You could make your own lessThan() function which, as before, can compare two items of any data type and return whether or not the first one is greater than the second one. Putting this into your Insertion Sort algorithm will allow it to work for all data types. 
 
 <h3>Extensions</h3>
 <ul>
@@ -119,7 +135,7 @@ Implement Insertion Sort in your chosen language, and test it on some input data
 <li>Can you implement Insertion Sort recursively? It won't be useful or efficient, but it could be a fun challenge. You can then compare the efficiency loss with the original one. Wikipedia offers a solution if you get stuck.</li>
 <li>Implement the ability to interrupt the insertion sort halfway through to add more values to be sorted, simulating a website, for example, that receives more input on the server side from the client.</li>
 <li>Try to understand why the time complexity of the Insertion Sort algorithm is quadratic - it is quite an easy one to understand.</li>
-<li>It is widely commented on the Internet that a linked list data structure is 
+<li>It is widely commented on the Internet that a linked list data structure is highly adapted for the insertion sort algorithm - find out why and implement the algorithm using this structure if you can</li>
 </ul>
 
 <h3>Hints & Solutions</h3>
@@ -141,4 +157,5 @@ Wikipedia predicts the resulting threshold at around 7-50 elements, depending on
 
 5:It is because we have a nested loop - we loop through all values in the list to find the values to insert, then loop over them again to work out where to insert. If we just had one nested loop, we would only add one extra iteration for every extra value added to the list - this would be linear complexity, but because we have both loops, we add an extra number of comparisons which is in the order of n (worst case) throughout the whole of the inner loop by the addition of one extra element to the end of the list. This is why the complexity is n^2. If we double the list length, instead of having double the number of iterations to make like for a single loop, for each of these we have double the number of iterations as well because of the inner loop - so we quadruple the total number of iterations, which is equivalent to quadratic complexity. 
 
-#Need to finish tests and pseudocodde. 
+6. This is because you don't need to do any moving around of items in memory when you do the insertion - there is no shifting of items; you simply adjust the pointers. This means you can have all of the advantages of insertion sort without its main disadvantage which is the number of writes made to memory.
+
