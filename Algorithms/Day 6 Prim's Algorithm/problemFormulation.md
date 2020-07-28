@@ -82,6 +82,7 @@ class Vertex():
 firstOne = Vertex([])
 secondOne = Vertex([])
 firstOne.connections.append([secondOne,4.5])
+secondOne.connections.append([firstOne,4.5])
 lettersToVertices = {'A':firstOne,'B':secondOne} #for example
 ```
 
