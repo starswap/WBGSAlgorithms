@@ -1,4 +1,4 @@
-TL;DR - Dijkstra's Algorithm finds the shortest path across a network by storing all of the points in a queue, ordered by the distance to them from the start. You repeatedly process the first item on the queue, checking if it allows access to another node along a shorter path than the path that was previously required to access it. 
+TL;DR - Dijkstra's Algorithm finds the shortest path across a network by storing all of the points in a queue, ordered by the distance to them from the start. You repeatedly process the first item on the queue, checking if it allows access to another node along a shorter path than the path that was previously required to access it. It has two main problems which both occur when the network in question has specific characteristics - these reduce the efficiency but not the accuracy of the result. We will improve on these problems tomorrow with A* Search.
 
 <h1>Day 9</h1>
 <h2>Dijkstra's Shortest Path Algorithm</h2>
@@ -159,13 +159,17 @@ You could use the network depicted in the Computerphile video above to test your
 <li>Use some kind of network drawing library to draw the network out and then highlight the shortest path that you have produced</li>
 <li>Again you might like to use file reading to build your network. I recommend creating a standard format for your network files such as:</li>
 </ul>
-```
+
 7
+
 AB 4
+
 EF 8.3
+
 BC 2.1
+
 CE 3.5
-```
+
 
 <h3>Hints</h3>
 If you are using an LLL, I am recommending as always the Linked List data structure for this task. This is because it supports insertion to keep lists sorted. This is much easier and much more memory efficient that having to shift all of the array items around - you can simply adjust the pointers. For some more information on Linked Lists:
