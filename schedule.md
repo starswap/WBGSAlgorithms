@@ -17,8 +17,8 @@
 <br />
 <table>
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
-<tr><td>Insertion Sort </td><td>Monday 27/07/20</td><td>TODAY</td></tr>
-<tr><td>Dijkstra's Algorithm </td><td>Tuesday 28/07/20</td><td>Still to come</td></tr>
+<tr><td>Insertion Sort </td><td>Monday 27/07/20</td><td>DONE</td></tr>
+<tr><td>Dijkstra's Algorithm </td><td>Tuesday 28/07/20</td><td>TODAY</td></tr>
 <tr><td>A* Search Algorithm </td><td>Wednesday 29/07/20</td><td>Still to come</td></tr>
 <tr><td>Shell Sort </td><td>Thursday 30/07/20</td><td>Still to come</td></tr>
 <tr><td>B* Search Algorithm </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
