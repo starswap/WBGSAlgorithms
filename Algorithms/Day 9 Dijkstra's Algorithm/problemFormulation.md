@@ -166,4 +166,6 @@ CE 3.5
 ```
 
 <h3>Hints</h3>
-If you are using an LLL , try the Linked List data structure 
+If you are using an LLL, I am recommending as always the Linked List data structure for this task. This is because it supports insertion to keep lists sorted. This is much easier and much more memory efficient that having to shift all of the array items around - you can simply adjust the pointers. For some more information on Linked Lists:
+https://www.youtube.com/watch?v=DyG9S9nAlUM
+https://www.youtube.com/watch?v=t5NszbIerYc
