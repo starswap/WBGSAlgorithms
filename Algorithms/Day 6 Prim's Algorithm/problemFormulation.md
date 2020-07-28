@@ -76,7 +76,7 @@ However, we still haven't linked the vertices to the letters. You would do this 
 
 ```Python
 class Vertex():
-	def __init__(connections):
+	def __init__(self,connections):
 		self.connections = connections
 
 firstOne = Vertex([])
