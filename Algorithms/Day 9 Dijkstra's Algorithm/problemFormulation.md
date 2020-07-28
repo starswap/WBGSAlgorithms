@@ -1,3 +1,5 @@
+TL;DR - Dijkstra's Algorithm finds the shortest path across a network by storing all of the points in a queue, ordered by the distance to them from the start. You repeatedly process the first item on the queue, checking if it allows access to another node along a shorter path than the path that was previously required to access it. 
+
 <h1>Day 9</h1>
 <h2>Dijkstra's Shortest Path Algorithm</h2>
 
@@ -33,8 +35,8 @@ def __init__(self,pathVia,totalWeight,connections,letter):
 	self.letter = letter
 
 #Create Vertices
-firstOne = Vertex('',-1,[],'A') #We initialise the vertices with no connections, no path and a totalPath weight of -1, which will allow us to distinguish vertices which don't yet have a weight from vertices which do.
-secondOne = Vertex('',-1,[],'B')
+firstOne = Vertex('',100000000000000000,[],'A') 
+secondOne = Vertex('',100000000000000000,[],'B')
 #Build our (very small) network.
 firstOne.connections.append([secondOne,4.5])
 secondOne.connections.append([firstOne,4.5])
@@ -92,7 +94,7 @@ FUNCTION dijkstra(queue,startIndex,endIndex,alphabet):
 					ENDIF
 				ENDFOR #k now stores the index of the item that needs to be moved and reinserted
 				FOR j <- 0 TO LENGTH(queue) - 1: #Now we need to insert the changed value into the queue in the right place so it stays ordered
-					IF (queue[j].totalWeight > thisItem.connections[i][0] OR queue[j].totalWeight == -1) #We treat -1 as bigger than all values that we have set.
+					IF (queue[j].totalWeight > thisItem.connections[i][0)
 						insert(queue,queue[k],j) #The changed value will go before the value that it is less than so that is right.
 						ARRAY_DELETE(queue,k+1) #Now we have two of the same element in the list so get rid of the old one
 						BREAK #We don't need to keep looking as we have found where to insert it and we have done the insertion
@@ -119,7 +121,7 @@ queue = []
 alphabet = ['A','B','C','D',.....] #If you want to be compatible with more than 26 nodes you can just add more labels at the end of this list with as many characters as you want.
 
 FOR i <- 1 TO vertices: #Inclusive
-	ARRAY_APPEND(queue,Vertex('',-1,[],alphabet[i-1]))
+	ARRAY_APPEND(queue,Vertex('',100000000000000000000000000000,[],alphabet[i-1]))
 
 FOR i <- 0 TO LENGTH(vertices)-1:
 	FOR j <- 0 TO LENGTH(vertices)-1:
