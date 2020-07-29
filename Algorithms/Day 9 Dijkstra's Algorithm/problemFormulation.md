@@ -94,7 +94,7 @@ FUNCTION dijkstra(queue,startIndex,endIndex,alphabet):
 					ENDIF
 				ENDFOR #k now stores the index of the item that needs to be moved and reinserted
 				FOR j <- 0 TO LENGTH(queue) - 1: #Now we need to insert the changed value into the queue in the right place so it stays ordered
-					IF (queue[j].totalWeight > thisItem.connections[i][0)
+					IF (queue[j].totalWeight > thisItem.connections[i][0].totalWeight)
 						insert(queue,queue[k],j) #The changed value will go before the value that it is less than so that is right.
 						ARRAY_DELETE(queue,k+1) #Now we have two of the same element in the list so get rid of the old one
 						BREAK #We don't need to keep looking as we have found where to insert it and we have done the insertion
@@ -122,10 +122,10 @@ alphabet = ['A','B','C','D',.....] #If you want to be compatible with more than 
 
 FOR i <- 1 TO vertices: #Inclusive
 	ARRAY_APPEND(queue,Vertex('',100000000000000000000000000000,[],alphabet[i-1]))
-
+ENDFOR
 FOR i <- 0 TO LENGTH(vertices)-1:
 	FOR j <- 0 TO LENGTH(vertices)-1:
-		OUTPUT("Enter the weight of the edge connecting " + alphabet[i] + " to " + alphabet[j] + " or N for 'this vertex is not present':")
+		OUTPUT("Enter the weight of the edge connecting " + alphabet[i] + " to " + alphabet[j] + " or N (case sensitive) for 'this vertex is not present':")
 		result <- USERINPUT
 		IF (result != 'N'):
 			ARRAY_APPEND(queue[i].connections,[queue[j],STR_TO_INT(result)])
