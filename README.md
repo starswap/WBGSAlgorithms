@@ -16,19 +16,13 @@ For this reason, I am proposing a project to practice our programming for roughl
 <li>Don't forget that by participating you will also perceive the inestimable benefit of an improved knowledge of your chosen programming language, and this project could be included on a CV, listed as participation in a collaborative super-curricular project,.</li>
 </ol>
 
-Hopefully this will be a fun way to practice programming and learn about some new algorithms that we haven't encountered yet.
-The first few algorithms will be something like: (starting easy with some that we know from GCSE)
-<ul>
-<li>Linear Search</li>
-<li>Binary Search</li>
-<li>Bubble Sort</li>
-<li>Merge Sort</li>
-<li>Euclidean Algorithm (for finding the HCF/GCD)</li>
-<li>A Level search and sort alg.s such as Insertion sort</li>
-</ul>
+Hopefully this will be a fun way to practice programming and learn about some new algorithms that we haven't encountered yet. 
+
+EDIT: You can find all of the algorithms that we have and are planning to study in the schedule.md document above. The blog posts about the algorithms and the code can be found in the Algorithms directory. Please note that from Day 10 onwards the ordering is unfortunately alphabetical, meaning it goes Day 1, Day 10, Day 2. 
+
 All of these will be fully documented so don't worry if you don't recognise them.
 
-And then we will do some other interesting and useful ones from Number Theory, Linguistics and Cryptography. 
+The main fields of algorithms chosen are Maths, Linguistics and Cryptography. 
 
 Any contributions, no matter what language or algorithm are welcome.
 
