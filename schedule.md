@@ -1,6 +1,6 @@
 <h1>Schedule</h1>
-<h3>To be updated each week</h3>
-
+<h3>Updated automatically every day.</h3>
+<p>If you have any suggestions for additions to the schedule, please send them in.</p>
 
 <br />
 <table>
@@ -18,11 +18,11 @@
 <table>
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
 <tr><td>Insertion Sort </td><td>Monday 27/07/20</td><td>DONE</td></tr>
-<tr><td>Dijkstra's Algorithm </td><td>Tuesday 28/07/20</td><td>TODAY</td></tr>
-<tr><td>A* Search Algorithm </td><td>Wednesday 29/07/20</td><td>Still to come</td></tr>
+<tr><td>Dijkstra's Algorithm </td><td>Tuesday 28/07/20</td><td>DONE</td></tr>
+<tr><td>A* Search Algorithm </td><td>Wednesday 29/07/20</td><td>TODAY</td></tr>
 <tr><td>Shell Sort </td><td>Thursday 30/07/20</td><td>Still to come</td></tr>
-<tr><td>B* Search Algorithm </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
-<tr><td>Quick Sort </td><td>Saturday 01/08/20</td><td>Still to come</td></tr>
+<tr><td>Quick Sort </td><td>Friday 31/07/20</td><td>Still to come</td></tr>
+<tr><td>Base64 Encoding </td><td>Saturday 01/08/20</td><td>Still to come</td></tr>
 <tr><td>Heap Sort </td><td>Sunday 02/08/20</td><td>Still to come</td></tr>
 </table>
 
@@ -31,7 +31,7 @@
 <tr><th>Algorithm</th><th>Date</th><th>State</th></tr>
 <tr><td>Quick Select </td><td>Monday 03/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Tuesday 04/08/20</td><td>Still to come</td></tr>
-<tr><td>TBC </td><td>Wednesday 05/08/20</td><td>Still to come</td></tr>
+<tr><td>DES </td><td>Wednesday 05/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Thursday 06/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Friday 07/08/20</td><td>Still to come</td></tr>
 <tr><td>TBC </td><td>Saturday 08/08/20</td><td>Still to come</td></tr>
