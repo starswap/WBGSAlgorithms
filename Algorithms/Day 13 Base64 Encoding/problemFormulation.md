@@ -37,9 +37,7 @@ You can see that we have converted 6 characters into 8, but the range of charact
 
 That seems simple enough, however there is one more thing to consider, which is the padding characters. Imagine that we added one more character to our string above, say a 3, which equals 0011 0011 in ASCII. We now have 7*8 = 56 bits to encode, but that doesn't divide by 6, which is imperative for the conversion back to characters for transmission. To fix this we add 4 zeros to fill up to the end of the next 6 bit block. 
 
-We now have:
-
-Base643 = 01000010011000010111001101100101001101100011010000110011[0000] = 010000 100110 000101 110011 011001 010011 011000 110100 001100 11[0000]
+We now have: Base643 = 01000010011000010111001101100101001101100011010000110011[0000] = 010000 100110 000101 110011 011001 010011 011000 110100 001100 11[0000]
 
 									     Q      m      F      z      Z      T      Y      0      M       w
 When decoding this, we don't know which of these characters are padding zeros and which are not. If we know that we are looking for an original message which was chunked into blocks of 8 bits, we could go 8 bits at a time decoding the message until we got to 001100110000. We would take out the first 8 bits to get 00110011 and we would decode that to 3, which is right. We would then assume that the remaining 4 characters were padding as they don't make up a full byte. However, what if we wanted to encode something that started in binary and it was allowed to have single nibbles, or what if we were worried that 4 extra bits were lost in transit, and hence we were missing a whole character from the original message.
