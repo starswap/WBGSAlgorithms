@@ -117,7 +117,7 @@ END_FUNCTION
 FUNCTION base64_encode(binaryString): #Making these functions convert between base64 and binary strings rather than between base64 and text strings is good as it means non-text data such as images can easily be encoded
 	i <- 0
 	resultString <- ""
-	mapping <- ["a","b","c","d"....,"A","B","C","D"....,"0","1","2","3"....,"+","/"] #You obviously need to actually fill in all of the values
+	mapping <- ["A","B","C","D"....,"a","b","c","d"....,"0","1","2","3"....,"+","/"] #You obviously need to actually fill in all of the values
 	WHILE (i+6 < LENGTH(binaryString)-1):
 		currentBinaryString <- binaryString[i:i+5] #Inclusive ranging! Select current block to convert. We then need to convert it back to a character. We could do this with a simple mapping dictionary/array/hashtable/object or by using the sequential properties of the table. 0-25 = A-Z, 26-51 = a-z, 52-61 = 0-9, 62,63 = +,/
 		decimal <- to_decimal(currentBinaryString)
@@ -136,7 +136,7 @@ FUNCTION base64_encode(binaryString): #Making these functions convert between ba
 END_FUNCTION
 
 FUNCTION base64_decode(textString):
-	mapping <- ["a","b","c","d"....,"A","B","C","D"....,"0","1","2","3"....,"+","/"]
+	mapping <- ["A","B","C","D"....,"a","b","c","d"....,"0","1","2","3"....,"+","/"]
 	binary_string <- ""
 	FOR i <- 0 TO LENGTH(textString) - 1:
 		currentChar <- textString[i]
