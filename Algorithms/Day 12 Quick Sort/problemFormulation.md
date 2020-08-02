@@ -169,7 +169,7 @@ Final note to make - regardless of the partitioning scheme we must avoid creatin
 
 
 <h4>Pseudocode</h4>
-
+```
 FUNCTION quick_sort_lomuto(list): #Please note that this code was created with help from the Wikipedia page on Quick Sort.
 	IF (LENGTH(list) <= 1):
 		RETURN list
@@ -215,7 +215,7 @@ FUNCTION quick_sort_hoare(list): #Please note that this code was created with he
 		END_WHILE
 	END_IF
 END_FUNCTION
-
+```
 <h4>Summary of the Pros and Cons of Quick Sort</h4>
 <table>
 <tr><th>+s</th><th>-s</th>
