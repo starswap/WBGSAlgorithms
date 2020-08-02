@@ -51,9 +51,11 @@ Because we are converting between 6 and 8 bit characters, we know that every 24 
 
 For example:
 
+```
 B --> 01000010 -> 010000 10 -> 010000 10[0000] -> Qg== (the two equals characters mean we have added four zeros of padding in order to make up the last character. This means that on decoding we go Qg== -> Qg including 2*2 padding bits -> 010000 100000 -> Discard the last 4 bits as we know they are padding -> 010000 10 -> Regroup into blocks of 8 01000010 -> B) 
 B6 -> 01000010 00110110 -> 0100001000110110 -> 010000 100011 0110 -> 010000 100011 0110[00] -> QjY= (the equals character means we have added 2 bits of padding. This means that on decoding we go QjY= -> QjY including 2*1 padding bits -> 010000 100011 011000 -> Discard last two bits as we know that they are padding -> 010000 100011 0110 -> 01000010 00110110 -> B6 (ASCII) )
 B64 -> 01000010 00110110 00110100 -> 010000100011011000110100 -> 010000 100011 011000 110100 -> QjY0 (there are no equals characters so decoding is simply the reverse process. QjY0 -> 010000 100011 011000 110100 -> 010000100011011000110100 -> 01000010 00110110 00110100 -> B64)
+```
 
 The equals characters can also be thought of as ensuring that Base64 strings are always a multiple of 4 characters in length. This means that these messages can then be decoded in blocks of 4 characters, checking each time at the end of the block for equals signs, which tell you how many characters you are looking to decode this block into. If there are no equals signs, you are looking to decode the block into 3 ASCII characters; if there are 1 equals sign 2 ASCII chars; with 2 equals signs one ASCII char. This is equivalent to understanding them as representing the number of padding zeros when we have 8 bit ASCII original encoding.
 
