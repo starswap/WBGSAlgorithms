@@ -13,7 +13,7 @@ Having chosen this value, the Quick Sort Algorithm splits the array into two hal
 <ul>
 <li>Elements greater than the pivot</li>
 <li>Elements less than the pivot</li>
-</il>
+</ul>
 
 There are many different ways to do this - please see partitioning schemes below.
 
