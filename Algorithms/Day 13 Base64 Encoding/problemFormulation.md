@@ -181,7 +181,7 @@ OUTPUT finalString
 
 
 <h3>Tests</h3>
-For Base64 encoding, I'd like to recommend the wonderful CyberChef, produced by the GCHQ. You can select the "To Base64" or "From Base64" tiles from the favourites drawer and drag them into the "Recipe" in the centre. Type some input into the top right box and see the result in the bottom right one. Compare this to the result given by your program.
+For Base64 encoding, I'd like to recommend the wonderful <a href="https://gchq.github.io/CyberChef/">CyberChef</a>, produced by the GCHQ. You can select the "To Base64" or "From Base64" tiles from the favourites drawer and drag them into the "Recipe" in the centre. Type some input into the top right box and see the result in the bottom right one. Compare this to the result given by your program.
 
 <a href="https://en.wikipedia.org/wiki/Base64">Wikipedia</a> offers some examples as well. 
 
