@@ -142,11 +142,11 @@ FUNCTION base64_decode(textString):
 		currentChar <- textString[i]
 		currentCharIndex <- ARRAY_SEARCH(mapping,currentChar) #Any searching algorithm we have done or another - your language probably has one builtin.
 		binary <- to_binary(currentCharIndex,6) #We need to be sure that we have converted this index to a six char length binary string for this to work. You could use a mapping hash table/dictionary instead of this but this method seems to be quicker.
-		binaryString <- ARRAY_CONCAT(binaryString,binary)
+		binaryString <- STR_CONCAT(binaryString,binary)
 	END_FOR
 	i <- LENGTH(binaryString)-1
 	numberOfEquals <- 0
-	WHILE (binaryString[i] == '=':
+	WHILE (binaryString[i] == '='):
 		numberOfEquals++
 		i--
 	END_WHILE
