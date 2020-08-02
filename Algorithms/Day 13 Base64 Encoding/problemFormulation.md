@@ -71,34 +71,34 @@ Before we can produce a Base64 encoding function, we need to be able to get the 
 
 Please note that because we want to operate bit by bit and take ranges, for example, the easiest way to write this function will be to store strings of bits as strings - of course this uses 8* more memory than just storing bits, but this is fine for our purposes, since we won't be converting much data, and the result achieved will be right.
 ```
-FUNCTION to_binary(base10):
+FUNCTION to_binary(base10,lengthMultiple):
 	answerString <- ""
 	WHILE (base10 != 1):
 		answerString <- STR_CONCAT(answerString,INT_TO_STR(base10 MOD 2))
 		base10 <- base10 DIV 2
 	END_WHILE
 	answerString <- STR_CONCAT(answerString,"1")
+	WHILE NOT(LENGTH(answerString) MOD lengthMultiple == 0):
+		answerString <- STR_CONCAT("0",answerString)
+        END_WHILE
 	RETURN STR_REVERSE(answerString)
 END_FUNCTION
 
-FUNCTION to_decimal(base2,lengthMultiple):
+FUNCTION to_decimal(base2):
 	answer <- 0
 	binaryString <- INT_TO_STR(base2)
 	multiplier = 1
 	FOR i <- 0 TO LENGTH(binaryString) -1:
 		answer = multiplier * STR_TO_INT(binaryString[i])
-		multiplier = multplier * 2
+		multiplier = multiplier * 2
 	END_FOR
-        WHILE NOT(LENGTH(result) MOD lengthMultiple == 0):
-		result <- STR_CONCAT("0",result)
-        END_WHILE
 	RETURN answer
 END_FUNCTION
 
 FUNCTION string_to_binary_string(inputString): #If you want to use a different starting encoding such as Unicode UTF16 for example, this is the function to change. The others should work fine.
 	binaryString <- ""
 	FOR i <- 0 TO LENGTH(inputString) -1:
-		ASCIIBinary <- toBinary(CHAR_TO_INT(inputString[i]),8) #We need to make sure that this is of length that is a multiple of 8 for B64 to work
+		ASCIIBinary <- to_binary(CHAR_TO_INT(inputString[i]),8) #We need to make sure that this is of length that is a multiple of 8 for B64 to work
 		binaryString <- STR_CONCAT(binaryString,ASCIIBinary)
 	END_FOR
 	RETURN binaryString
