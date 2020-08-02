@@ -8,7 +8,7 @@ Next, we have encryption. Encrypting data requires a key and an encryption funct
 
 Finally, a hashing algorithm is a one-way function, which acts more like an encoder as it has no key. It converts an arbitrary length string (which could be an entire file) into a fixed length block of seemingly random characters from a character set. These functions cannot be easily reversed, which means given a hash you cannot find out what the original data was. This makes them useful for password storage. Because they always produce the same result for the same input data, and they reduce the length of the data, they are also useful for verifying the integrity of files. You must only check that the hashes match to know that the files match, not the whole files.
 
-In a sense, a hashing algorithm is the most secure out of these three, but it is so secure that it isn't useful for the transmission of messages, because even the intended recipient wouldn't be able to recover the original message. Encryption would be used for the secure transmission of messages, as encoding would not be secure <strong>enough</strong>
+In a sense, a hashing algorithm is the most secure out of these three, but it is so secure that it isn't useful for the transmission of messages, because even the intended recipient wouldn't be able to recover the original message. Encryption would be used for the secure transmission of messages, as encoding would not be secure enough/at all.
 
 <h3>Algorithm</h3>
 
