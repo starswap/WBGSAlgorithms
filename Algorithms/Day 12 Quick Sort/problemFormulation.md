@@ -215,6 +215,9 @@ FUNCTION quick_sort_hoare(list): #Please note that this code was created with he
 	END_IF
 END_FUNCTION
 ```
+
+
+
 <h4>Summary of the Pros and Cons of Quick Sort</h4>
 <table>
 <tr><th>+s</th><th>-s</th>
