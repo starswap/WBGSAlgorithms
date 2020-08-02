@@ -170,7 +170,6 @@ Final note to make - regardless of the partitioning scheme we must avoid creatin
 
 <h4>Pseudocode</h4>
 ```
-
 FUNCTION quick_sort_lomuto(list): #Please note that this code was created with help from the Wikipedia page on Quick Sort.
 	IF (LENGTH(list) <= 1):
 		RETURN list
