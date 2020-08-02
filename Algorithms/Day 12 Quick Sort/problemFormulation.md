@@ -199,7 +199,6 @@ FUNCTION quick_sort_hoare(list): #Please note that this code was created with he
 			DO 
 				i++
 			WHILE list[i] < list[pivotIndex] #Find an element in the first half that belongs in the second half
-		
 			DO 
 				j++
 			WHILE list[j] > list[pivotIndex] #Find an element in the second half that belongs in the first half
