@@ -169,6 +169,8 @@ Final note to make - regardless of the partitioning scheme we must avoid creatin
 
 
 <h4>Pseudocode</h4>
+
+
 ```
 #Please note that this code was created with help from the Wikipedia page on Quick Sort.
 FUNCTION quick_sort_lomuto(list): 
