@@ -87,10 +87,10 @@ END_FUNCTION
 FUNCTION to_decimal(base2):
 	answer <- 0
 	binaryString <- INT_TO_STR(base2)
-	multiplier = 1
-	FOR i <- 0 TO LENGTH(binaryString) -1:
-		answer = multiplier * STR_TO_INT(binaryString[i])
-		multiplier = multiplier * 2
+	multiplier <- 1
+	FOR i <- LENGTH(binaryString)-1 TO 0 COUNTING DOWN:
+		answer <- answer + multiplier * STR_TO_INT(binaryString[i])
+		multiplier <- multiplier * 2
 	END_FOR
 	RETURN answer
 END_FUNCTION
@@ -107,8 +107,8 @@ END_FUNCTION
 FUNCTION binary_string_to_string(binaryString): #You will need to change this as well
 	resultString <- ""
 	i <- 0
-	WHILE (i < LENGTH(binaryString)-8):
-		result_string = STR_CONCAT(resultString,INT_TO_CHAR(to_decimal(binaryString[i:i+8])))
+	WHILE (i < LENGTH(binaryString)-7):
+		resultString = STR_CONCAT(resultString,INT_TO_CHAR(to_decimal(binaryString[i:i+8])))
 		i <- i+8
 	ENDWHILE
 	RETURN resultString
@@ -124,7 +124,7 @@ FUNCTION base64_encode(binaryString): #Making these functions convert between ba
 		resultString <- STR_CONCAT(resultString, mapping[decimal])
 		i <- i+6
 	ENDWHILE
-	binaryString <- STR_CONCAT(binary_string,"000000")
+	binaryString <- STR_CONCAT(binaryString,"000000")
 	lastBlock <- binaryString[i:i+5] #Inclusive ranging again.
 	resultString <- STR_CONCAT(resultString,mapping[to_decimal(lastBlock)])
 	numberOfPaddingBits <- (LENGTH(binaryString)-6 - i) 
@@ -137,7 +137,7 @@ END_FUNCTION
 
 FUNCTION base64_decode(textString):
 	mapping <- ["A","B","C","D"....,"a","b","c","d"....,"0","1","2","3"....,"+","/"]
-	binary_string <- ""
+	binaryString <- ""
 	FOR i <- 0 TO LENGTH(textString) - 1:
 		currentChar <- textString[i]
 		currentCharIndex <- ARRAY_SEARCH(mapping,currentChar) #Any searching algorithm we have done or another - your language probably has one builtin.
