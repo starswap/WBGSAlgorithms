@@ -29,13 +29,9 @@ Here is an example, using ASCII to convert input characters to binary:
 
 Our bit string is now 010000100110000101110011011001010011011000110100
 
-Split this into blocks of 6:
+Split this into blocks of 6: 010000 100110 000101 110011 011001 010011 011000 110100
 
-010000 100110 000101 110011 011001 010011 011000 110100
-
-Using the Base64 table, we convert this to:
-
-QmFzZTY0
+Using the Base64 table, we convert this to: QmFzZTY0
 
 You can see that we have converted 6 characters into 8, but the range of characters is now much less, as we have gone from 256 possible characters as we had 8 bits per character to 64 as we have 6. We could apply this to any original encoding, such as a 16 bit per character Unicode one. Doing that would reduce the character range from 65536 to just 64. We can transmit all of these 64 characters by email, for example whereas basic email wouldn't support the transmission of all of the different characters represented by the 16 bit encoding.
 
