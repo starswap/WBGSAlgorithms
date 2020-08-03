@@ -127,7 +127,7 @@ FUNCTION base64_encode(binaryString): #Making these functions convert between ba
 	binaryString <- STR_CONCAT(binaryString,"000000")
 	lastBlock <- binaryString[i:i+5] #Inclusive ranging again.
 	resultString <- STR_CONCAT(resultString,mapping[to_decimal(lastBlock)])
-	numberOfPaddingBits <- (LENGTH(binaryString)-6 - i) 
+	numberOfPaddingBits <- 6 - (LENGTH(binaryString)-6 - i) 
 	numberOfEqualsRequired <- numberOfPaddingBits/2
 	FOR i <-1 TO numberOfEqualsRequired:
 		resultString <- STR_CONCAT(resultString,"=")
@@ -136,25 +136,25 @@ FUNCTION base64_encode(binaryString): #Making these functions convert between ba
 END_FUNCTION
 
 FUNCTION base64_decode(textString):
-	mapping <- ["A","B","C","D"....,"a","b","c","d"....,"0","1","2","3"....,"+","/"]
-	binaryString <- ""
-	FOR i <- 0 TO LENGTH(textString) - 1:
-		currentChar <- textString[i]
-		currentCharIndex <- ARRAY_SEARCH(mapping,currentChar) #Any searching algorithm we have done or another - your language probably has one builtin.
-		binary <- to_binary(currentCharIndex,6) #We need to be sure that we have converted this index to a six char length binary string for this to work. You could use a mapping hash table/dictionary instead of this but this method seems to be quicker.
-		binaryString <- STR_CONCAT(binaryString,binary)
-	END_FOR
-	i <- LENGTH(binaryString)-1
+	mapping <- ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","+","/"]
+	i <- LENGTH(textString)-1
 	numberOfEquals <- 0
-	WHILE (binaryString[i] == '='):
-		numberOfEquals++
-		i--
-	END_WHILE
-	numberOfCharsToIgnore <- 2*numberOfEquals
-	binaryString <- binaryString[0:LENGTH(binaryString)-numberOfEquals-1]
+	WHILE (textString[i] = '='):
+		numberOfEquals <- numberOfEquals +  1
+		i <- i - 1	
+	ENDWHILE
+	textString <- textString[0:LENGTH(textString)-1-numberOfEquals]
+	binaryString <- ""
+	FOR i <- 0 TO LENGTH(textString)-1:
+		currentChar <- textString[i]
+		currentCharIndex <- ARRAY_SEARCH(mapping,currentChar) #Any searching algorithm we have done or another - your language probably has one builtin. You could use a mapping hash table/dictionary instead of this but this method seems to be quicker.
+		binary <- to_binary(currentCharIndex,6) #We need to be sure that we have converted this index to a six char length binary string for this to work. 
+		binaryString <- STR_CONCAT(binaryString,binary)
+	
+	numberOfBitsToIgnore <- 2*numberOfEquals
+	binaryString <- binaryString[0:LENGTH(binaryString)-1-numberOfBitsToIgnore] #Inclusive Ranging
 	RETURN binaryString
-END_FUNCTION
-
+ENDFUNCTION
 ```
 
 
