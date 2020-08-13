@@ -155,7 +155,7 @@ Here is an example with the same array as in the two previous ones: [90,56,356,1
 As above, we now perform the same sorting process on the partitions. 
 ```
 
-Be aware of the need to move both pivots separately and check individually whether they have encountered a wrongly partitioned element, not simply to check 0 and 13, then 1 and 12, then 2 and 11 together, for example, as some swappable pairs may be missed. We need to include elements equal to the pivot so that the pivot itself can be moved in case it is physically but not numerically in the middle of the list at the beginning.
+Be aware of the need to move both indices separately and check individually whether they have encountered a wrongly partitioned element, not simply to check 0 and 13, then 1 and 12, then 2 and 11 together, for example, as some swappable pairs may be missed. We need to include elements equal to the pivot so that the pivot itself can be moved in case it is physically but not numerically in the middle of the list at the beginning.
 
 Although it seems as though we are doing lots of nested loops, Hoare's method actually confers speed advantages when all values are equal, when the values are already sorted (if the middle element is chosen to be the pivot), and on average (3 times fewer swaps according to Wikipedia) because we never reset i and j, so we are actually simply looping through half of the list in one direction and half in the other direction, which equates to looping over the whole list once only.
 
