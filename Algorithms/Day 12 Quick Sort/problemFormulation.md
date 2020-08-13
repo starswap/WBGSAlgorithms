@@ -196,7 +196,7 @@ FUNCTION quick_sort_hoare(list): #Please note that this code was created with he
 	IF (LENGTH(list) <= 1):
 		RETURN list
 	ELSE:
-		pivotIndex = LENGTH(list)-1 MOD 2
+		pivotIndex = LENGTH(list)-1 DIV 2
 		WHILE (1 == 1):
 			DO 
 				i++
