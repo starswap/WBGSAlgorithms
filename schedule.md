@@ -1,5 +1,5 @@
 <h1>Schedule</h1>
-<h3>Updated automatically every day.</h3>
+<h3>Usually Updated automatically every day. - Not currently up to date</h3>
 <p>If you have any suggestions for additions to the schedule, please send them in.</p>
 
 <br />
