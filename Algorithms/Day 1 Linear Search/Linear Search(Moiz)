@@ -1,0 +1,16 @@
+def search(target, list):
+	status = ""
+	for i in range(0,len(list)):
+		if list[i] == target:
+			print(target + " located at index "+str(list.index(target)))
+			status = "completed"
+	if status != "completed":
+		print("not found")
+		
+
+with open("plentyOfTestWordsCourtesyOfDrHedges.txt", "rt") as text:
+    text = text.read().splitlines()
+    target = (input("What do you want to search for?: "))
+
+search(target,text)
+    
