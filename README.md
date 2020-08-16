@@ -5,20 +5,20 @@
 <li>Algorithm Knowledge - A wider understanding of the different algorithms out there.</li>
 <li>Programming Skills - A programmer is only as versatile as the number of languages he is familiar with.</li>
 </ul>
-For this reason, I am proposing a project to practice our programming for roughly 20 mins every day until we go back to school:
+For this reason, I am proposing a project to practice our programming until we go back to school:
 <ol>
 <li>Each person who wishes to participate will choose a programming language, ideally one that they are learning but you can do one you know already. If two people choose the same language, that is fine. I am choosing C.</li>
-<li>Each day I will choose an algorithm to implement, and I will produce some C code to implement that algorithm as well as some instructions detailling how the algorithm works.</li>
-<li>Then, all other participants will produce a program implementing the same algorithm in their chosen language, if they are not busy (that is to say don't worry if you miss some days).</li>
+<li>Periodically, I will choose an algorithm to implement, and I will produce  some instructions detailling how the algorithm works.</li>
+<li>Then, other participants can produce a program implementing the same algorithm in their chosen language, if they are not busy (that is to say don't worry if you miss some days).</li>
 <li>They can then test their program using some tests which I will publish on the challenge page</li>
 <li>And then they can make a pull request to upload their code to the repository, or email me it and I will add it myself if you are not familiar with GitHub.</li>
 <li>Anyone who uploads code will then be featured on the repository, and at the end of the project I will choose some of my favourite implementations to highlight in some kind of installation, probably at Open Day. The quality of the code doesn't matter as long as it works, and we will even accept partial solutions.</li>
-<li>Don't forget that by participating you will also perceive the inestimable benefit of an improved knowledge of your chosen programming language, and this project could be included on a CV, listed as participation in a collaborative super-curricular project,.</li>
+<li>Don't forget that by participating you will also perceive the inestimable benefit of an improved knowledge of your chosen programming language, and this project could be included on a CV, listed as participation in a collaborative super-curricular project.</li>
 </ol>
 
 Hopefully this will be a fun way to practice programming and learn about some new algorithms that we haven't encountered yet. 
 
-EDIT: You can find all of the algorithms that we have and are planning to study in the schedule.md document above. The blog posts about the algorithms and the code can be found in the Algorithms directory. Please note that from Day 10 onwards the ordering is unfortunately alphabetical, meaning it goes Day 1, Day 10, Day 2. 
+EDIT: The blog posts about the algorithms and the code can be found in the Algorithms directory. Please note that from Day 10 onwards the ordering is unfortunately alphabetical, meaning it goes Day 1, Day 10, Day 2. 
 
 All of these will be fully documented so don't worry if you don't recognise them.
 
@@ -36,7 +36,7 @@ But until then, you can familiarise yourself with GitHub using the GitHub Instru
 
 The practise problem should be a bit of a challenge, but don't worry if you can't manage it, as I will publish a full solution and we will start simply with Linear Search on Monday, which everyone should be able to do. 
 
-NB: If you are an external student who didn't study Python for 2ndary School, this could be a way to get familiar with it, or also to get involved with the programming community at our school.
+NB: If you are an external student who didn't study Python for secondary School, this could be a way to get familiar with it, or also to get involved with the programming community at our school.
 
 NB: This might make a good way to practise your JS if you are doing the Code Academy JS as Dr Hedges suggested
 
