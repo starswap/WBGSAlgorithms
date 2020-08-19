@@ -7,8 +7,8 @@
 <tr><td>Linear Search </td><td>Monday 20/07/20</td><td>1</td><td>DONE</td></tr>
 <tr><td>Bubble Sort </td><td>Tuesday 21/07/20</td><td>1</td><td>DONE</td></tr>
 <tr><td>Euclidean Algorithm </td><td>Wednesday 22/07/20</td><td>1</td><td>DONE</td></tr>
-<tr><td>Binary Search </td><td>Thursday 23/07/20</td><td>DONE</td><td>2</td></tr>
-<tr><td>Merge Sort </td><td>Friday 24/07/20</td><td>DONE</td><td>2</td></tr>
+<tr><td>Binary Search </td><td>Thursday 23/07/20</td><td>2</td><td>DONE</td></tr>
+<tr><td>Merge Sort </td><td>Friday 24/07/20</td><td>2</td><td>DONE</td></tr>
 <tr><td>Prim's Algorithm </td><td>Saturday 25/07/20</td><td>4</td><td>DONE</td></tr>
 <tr><td>Primality Tests </td><td>Sunday 26/07/20</td><td>3</td><td>DONE</td></tr>
 </table>
